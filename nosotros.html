@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros | La Panchita Artesanías</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="brand">
+                <img src="logo.png" alt="Logo La Panchita Artesanías" class="brand-logo">
+                <span class="brand-name">LA PANCHITA <span class="brand-sub">ARTESANÍAS</span></span>
+            </a>
+            <nav class="nav-menu">
+                <a href="index.html" class="nav-link">Inicio</a>
+                <a href="nosotros.html" class="nav-link active">Nosotros</a>
+                <a href="catalogo.html" class="nav-link">Colección</a>
+                <a href="contacto.html" class="nav-link">Contacto & Redes</a>
+            </nav>
+            <button class="cart-btn" onclick="toggleCart()">
+                🛒 Canasto <span class="cart-badge" id="cart-count">0</span>
+            </button>
+        </div>
+    </header>
+
+    <main class="main-container animated-fade-up">
+        <section class="section-header">
+            <span class="section-tag">Nuestra Esencia</span>
+            <h1 class="section-title">Sobre Nosotros</h1>
+            <p class="section-description">Conocé la historia, el significado y el corazón detrás de La Panchita Artesanías.</p>
+        </section>
+
+        <!-- Secciones divididas en cajas manteniendo el estilo, sin misión, visión ni homenaje -->
+        <section class="products-grid" style="grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            
+            <article class="product-card" style="padding: 2rem; cursor: default;">
+                <div class="product-info" style="padding: 0;">
+                    <h3 class="product-title" style="margin-bottom: 1rem; font-size: 1.4rem;">Nuestra Propuesta</h3>
+                    <p class="product-description" style="font-size: 1rem; line-height: 1.6; color: #555;">
+                        La idea de mi empresa es crear diarios íntimos, lapiceras personalizadas, llaveros para regalar o para celulares, a alguien o para hacerse un mimo a uno mismo. Panchita es sinónimo de amor.
+                    </p>
+                </div>
+            </article>
+
+            <article class="product-card" style="padding: 2rem; cursor: default;">
+                <div class="product-info" style="padding: 0;">
+                    <h3 class="product-title" style="margin-bottom: 1rem; font-size: 1.4rem;">El Origen del Nombre</h3>
+                    <p class="product-description" style="font-size: 1rem; line-height: 1.6; color: #555;">
+                        Así se le conoce en la zona a esta flor, pero su nombre es Linna que simboliza la amistad duradera, la bondad recuerdo constante, la resiliencia, la alegría de vivir, fuerza, lealtad y cariño sincero. La flor se caracteriza por tener una gran variedad de colores y significados.
+                    </p>
+                </div>
+            </article>
+
+            <article class="product-card" style="padding: 2rem; cursor: default;">
+                <div class="product-info" style="padding: 0;">
+                    <h3 class="product-title" style="margin-bottom: 1rem; font-size: 1.4rem;">Valores y Objetivos</h3>
+                    <p class="product-description" style="font-size: 1rem; line-height: 1.6; color: #555;">
+                        <strong>Valores:</strong> Entregar un producto idéntico al pedido, asegurando que los clientes estén satisfechos con el servicio y el producto recibido.<br><br>
+                        <strong>Objetivos:</strong> Estar en los corazones de las personas, tener una tienda oficial y desarrollar nuevos diseños.
+                    </p>
+                </div>
+            </article>
+
+        </section>
+    </main>
+
+    <!-- Modal Canasto / Drawer -->
+    <div class="cart-backdrop" id="cart-backdrop" onclick="toggleCart()"></div>
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="drawer-header">
+            <h3>Tu Canasto</h3>
+            <button class="btn-close-drawer" onclick="toggleCart()">✕</button>
+        </div>
+        <div class="drawer-body" id="cart-items">
+            <p class="empty-cart">El canasto está vacío</p>
+        </div>
+        <div class="drawer-footer">
+            <div class="summary-line">
+                <span>Total:</span>
+                <span id="cart-total">$0</span>
+            </div>
+            <button class="btn-checkout" onclick="checkoutWhatsApp()">Enviar pedido por WhatsApp</button>
+        </div>
+    </aside>
+
+    <div class="toast" id="toast">Producto agregado</div>
+
+    <footer class="footer">
+        <p>&copy; 2026 La Panchita Artesanías. Fray Luis Beltrán, Mendoza. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
